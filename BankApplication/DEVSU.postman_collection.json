@@ -1,0 +1,777 @@
+{
+	"info": {
+		"_postman_id": "06246d74-d1b4-44cb-9e0c-121b977dcccb",
+		"name": "DEVSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1378372"
+	},
+	"item": [
+		{
+			"name": "CLIENT",
+			"item": [
+				{
+					"name": "Get Clients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 0,\n\t\"username\": \"echo api\",\n\t\"firstName\": \"Echo\",\n\t\"lastName\": \"Api\",\n\t\"email\": \"support@echoapi.com\",\n\t\"password\": \"12345\",\n\t\"phone\": \"\",\n\t\"userStatus\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:8001/api/clients",
+							"host": [
+								"{{url}}"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dni\": \"1234567890\",\n  \"name\": \"John Doe\",\n  \"password\": \"my_secure_password\",\n  \"gender\": \"Male\",\n  \"age\": 30,\n  \"address\": \"123 Main St, Anytown, USA\",\n  \"phone\": \"555-123-4567\",\n  \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Client",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dni\": \"1234567890\",\n  \"name\": \"John Doe Dos\",\n  \"password\": \"my_secure_password\",\n  \"gender\": \"Male\",\n  \"age\": 30,\n  \"address\": \"123 Main St, Anytown, USA\",\n  \"phone\": \"555-123-4567\",\n  \"active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Client",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete client",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/api/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get clients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  1,2\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/clients/by-ids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"clients",
+								"by-ids"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACCOUNT",
+			"item": [
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"ACC-10001\",\n  \"type\": \"AHORROS\",\n  \"initialAmount\": 1500.75,\n  \"active\": true,\n  \"clientId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"ACC-10001\",\n  \"type\": \"SAVINGS\",\n  \"initialAmount\": 1500.75,\n  \"active\": true,\n  \"clientId\": 42\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"ACC-10001\",\n  \"type\": \"AHORROS\",\n  \"initialAmount\": 1500.75,\n  \"active\": false,\n  \"clientId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Account",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TRANSACTIONS",
+			"item": [
+				{
+					"name": "Get Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"RETIRO\",\n  \"amount\": -2000,\n  \"accountId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statement Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "User-Agent",
+								"value": "EchoapiRuntime/1.1.0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/transactions/clients/2/report?dateTransactionStart=2024-01-01&dateTransactionEnd=2027-12-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transactions",
+								"clients",
+								"2",
+								"report"
+							],
+							"query": [
+								{
+									"key": "dateTransactionStart",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "dateTransactionEnd",
+									"value": "2027-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
